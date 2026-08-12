@@ -881,6 +881,52 @@
         text-align: center;
       }
     }
+
+    /* CONTAINER DO BOTÃO */
+.ml-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;    /* Espaço entre a barra de benefícios e o botão */
+  margin-bottom: 8px; /* Espaço abaixo do botão */
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* ESTILO DO BOTÃO MERCADO LIVRE */
+.btn-mercadolivre {
+  display: inline-block;
+  background-color: #FFF159; /* Amarelo clássico do Mercado Livre */
+  color: #2D3277;            /* Azul escuro do Mercado Livre */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.btn-mercadolivre:hover {
+  background-color: #FEE600;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 480px) {
+  .btn-mercadolivre {
+    width: 100%; /* No celular o botão ocupa a largura total */
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -1143,6 +1189,16 @@
           </div>
         </div>
       </div>
+      <!-- Fim da barra de benefícios -->
+
+<!-- ============================================= -->
+<!-- BOTÃO MERCADO LIVRE (ADICIONAR AQUI)          -->
+<!-- ============================================= -->
+<div class="ml-button-container">
+  <a href="https://www.mercadolivre.com.br/pagina/gsi_comercio" target="_blank" rel="noopener noreferrer" class="btn-mercadolivre">
+    COMPRAR PELO MERCADO LIVRE
+  </a>
+</div>
     </div>
   </section>
 
