@@ -180,8 +180,6 @@
     .hero {
       position: relative;
       background-color: var(--primary-navy);
-      background-image: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.85) 45%, rgba(15,25,46,0.4) 100%), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%231a2b4c"/><circle cx="500" cy="300" r="250" fill="none" stroke="%232a3f68" stroke-width="20"/><circle cx="500" cy="300" r="180" fill="none" stroke="%23385285" stroke-width="12"/></svg>');
       background-size: cover;
       background-position: center right;
       padding: 70px 24px 90px;
@@ -195,11 +193,11 @@
       width: 100%;
     }
     .hero-content {
-      max-width: 680px;
+      max-width: 600px;
     }
     .hero-badge {
       display: inline-block;
-      background-color: var(--primary-navy);
+      background-color: #a82333;
       color: #ffffff;
       font-size: 0.75rem;
       font-weight: 700;
@@ -209,34 +207,41 @@
       border-radius: 2px;
       margin-bottom: 20px;
     }
+    
+    /* 1. LOCALIZAÇÃO (Cinza Claro) */
     .hero-location {
       font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.1em;
-      color: var(--text-muted);
+      color: #cbd5e1; /* <--- ALTERADO */
       text-transform: uppercase;
       margin-bottom: 10px;
     }
+    
+    /* 2. TÍTULO PRINCIPAL (Branco Puro) */
     .hero-title {
       font-family: var(--font-display);
       font-size: 3.6rem;
       font-weight: 800;
-      color: var(--primary-navy);
+      color: #ffffff; /* <--- ALTERADO */
       line-height: 1.02;
       text-transform: uppercase;
       letter-spacing: 0.01em;
       margin-bottom: 20px;
     }
+    
+    /* 3. DESCRIÇÃO E NEGRITO (Cinza Claro / Branco) */
     .hero-description {
       font-size: 1.05rem;
-      color: #334155;
+      color: #e2e8f0; /* <--- ALTERADO */
       margin-bottom: 24px;
       line-height: 1.6;
     }
     .hero-description strong {
-      color: var(--primary-navy);
+      color: #ffffff; /* <--- ALTERADO */
       font-weight: 700;
     }
+    
     .hero-frete-tag {
       display: inline-flex;
       align-items: center;
@@ -256,6 +261,16 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+    }
+
+    /* 3. BOTÃO "VER PRODUTOS" EM VERMELHO */
+    .btn-navy {
+      background-color: #a82333; /* Troca o azul escuro por vermelho */
+      color: #ffffff;
+    }
+
+    .btn-navy:hover {
+      background-color: #861c28; /* Efeito ao passar o mouse */
     }
     /* ==========================================================================
        SECTION COMMON STYLES
@@ -977,9 +992,9 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero" id="inicio">
-    <div class="hero-container">
-      <div class="hero-content">
+    <section class="hero" id="inicio" style="background-image: url('img/banner-principal.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 630px; display: flex; align-items: center;">
+      <div class="hero-container">
+        <div class="hero-content">
         <span class="hero-badge">A PRODUTIVIDADE DA SUA EMPRESA COMEÇA AQUI.</span>
         <div class="hero-location"><strong> GSI LÂMINAS — SÃO JOSÉ DO RIO PRETO – SP </strong></div>
         <h1 class="hero-title">ESPECIALISTAS EM CORTES E SOLUÇÕES INDUSTRIAIS.</h1>
@@ -1015,9 +1030,9 @@
       <div class="products-grid">
         <!-- Card 1 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="none" stroke="#334155" stroke-width="10" stroke-dasharray="4,2"/><circle cx="50" cy="50" r="22" fill="none" stroke="#94a3b8" stroke-width="2"/></svg>
+            <img src="img/categoria-serra-de-fita.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">SANDFLEX COBRA 3851</h3>
@@ -1032,9 +1047,9 @@
         </div>
         <!-- Card 2 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <img src="img\categoria-serra-de-fita.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img">
+            <img src="img/categoria-serra-de-fita.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">LÂMINA DE SERRA FITA INTENSS</h3>
@@ -1049,9 +1064,9 @@
         </div>
         <!-- Card 3 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="none" stroke="#1e293b" stroke-width="12" stroke-dasharray="6,2"/></svg>
+            <img src="img/serra-madeira-pastilhada.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">LÂMINA DE SERRA FITA WOODPECKER PREMIUM</h3>
@@ -1065,9 +1080,9 @@
         </div>
         <!-- Card 4 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><ellipse cx="50" cy="40" rx="25" ry="10" fill="#cbd5e1" stroke="#475569"/><ellipse cx="50" cy="50" rx="25" ry="10" fill="#94a3b8" stroke="#475569"/><ellipse cx="50" cy="60" rx="25" ry="10" fill="#64748b" stroke="#475569"/></svg>
+            <img src="img/serra-madeira-pastilhada.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">3 TPI TCW FITA DE SERRA CARBIDE MULTI CHIP UNSET</h3>
@@ -1081,9 +1096,9 @@
         </div>
         <!-- Card 5 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><path d="M30 20 L40 80 L50 80 L60 20 Z" fill="#e2e8f0" stroke="#334155" stroke-width="2"/></svg>
+            <img src="img/categoria-serra-de-fita.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">DISCO DE CORTE STARRETT 115 x 1,6 x 22,22 mm - 4,1/2</h3>
@@ -1098,9 +1113,9 @@
         </div>
         <!-- Card 6 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><circle cx="40" cy="50" r="22" fill="#a82333"/><circle cx="60" cy="50" r="22" fill="#d97706"/></svg>
+            <img src="img/categoria-serra-de-fita.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">FACA DE DESOSSA CABO BRANCO MASTER LINA MUNDIAL</h3>
@@ -1115,9 +1130,9 @@
         </div>
         <!-- Card 7 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><rect x="15" y="45" width="70" height="10" fill="#cbd5e1" stroke="#334155"/><rect x="40" y="38" width="20" height="24" fill="#1e293b"/></svg>
+            <img src="img/serra-copo.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">SERRA COPO PARA AÇO</h3>
@@ -1133,9 +1148,9 @@
         </div>
         <!-- Card 8 -->
         <div class="product-card">
-          <div class="product-image-wrap">
+          <div class="product-image-wrap" style="padding: 0; overflow: hidden;">
             <span class="product-badge">EM ESTOQUE</span>
-            <svg width="120" height="120" viewBox="0 0 100 100"><rect x="30" y="35" width="30" height="40" fill="#ea580c"/><rect x="60" y="45" width="20" height="10" fill="#1e293b"/></svg>
+            <img src="img/categoria-serra-de-fita.png" alt="Lâmina de Serra Fita Intenss" class="product-card-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
           <div class="product-info">
             <h3 class="product-title">BROCA HSS PARA AÇO</h3>
@@ -1252,54 +1267,54 @@
       </div>
       <div class="categories-grid">
         <div class="category-card">
-          <div class="category-img">
-            <svg width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" fill="none" stroke="#1e293b" stroke-width="8" stroke-dasharray="4,2"/></svg>
-          </div>
+         <div class="category-img" style="padding: 0; overflow: hidden;">
+           <img src="img/categoria-serra-de-fita.png" alt="Serra Fita para AÇO" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+       </div>
           <div class="category-info">
             <h3 class="category-title">SERRA FITA para AÇO</h3>
             <p class="category-text">Bimetálicas e de metal duro para serras horizontais e verticais. Fabricadas sob medida para máxima produtividade e durabilidade.</p>
           </div>
         </div>
         <div class="category-card">
-          <div class="category-img">
-            <svg width="100" height="100" viewBox="0 0 100 100"><ellipse cx="50" cy="45" rx="30" ry="12" fill="#cbd5e1" stroke="#475569"/><ellipse cx="50" cy="55" rx="30" ry="12" fill="#64748b" stroke="#475569"/></svg>
-          </div>
+         <div class="category-img" style="padding: 0; overflow: hidden;">
+           <img src="img/categoria-serra-de-madeira.png" alt="Serra Fita para MADEIRA" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+         </div>
           <div class="category-info">
             <h3 class="category-title">SERRA FITA para MADEIRA</h3>
             <p class="category-text">Lâminas para marcenarias, serrarias e indústrias madeireiras, com excelente acabamento e rendimento.</p>
           </div>
         </div>
         <div class="category-card">
-          <div class="category-img">
-            <svg width="100" height="100" viewBox="0 0 100 100"><path d="M35 20 L50 80 L65 20 Z" fill="#e2e8f0" stroke="#334155" stroke-width="2"/></svg>
-          </div>
+         <div class="category-img" style="padding: 0; overflow: hidden;">
+           <img src="img/categoria-serra-de-carne.png" alt="Serras Fita para FRIGORÍFICOS" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+       </div>
           <div class="category-info">
             <h3 class="category-title">SERRAS FITA PARA FRIGORÍFICOS</h3>
             <p class="category-text">Lâminas para açougues, frigoríficos e processamento de alimentos, garantindo cortes precisos e segurança alimentar.</p>
           </div>
         </div>
-        <div class="category-card">
-          <div class="category-img">
-            <svg width="100" height="100" viewBox="0 0 100 100"><circle cx="40" cy="50" r="25" fill="#a82333"/><circle cx="60" cy="50" r="25" fill="#d97706"/></svg>
-          </div>
+       <div class="category-card">
+         <div class="category-img" style="padding: 0; overflow: hidden;">
+           <img src="img/categoria-de-discos.png" alt="Discos Abrasivos" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+       </div>
           <div class="category-info">
             <h3 class="category-title">DISCOS ABRASIVOS</h3>
             <p class="category-text">Discos de corte, flap e desbaste, linha completa para aplicações industriais, garantindo produtividade e acabamento de qualidade.</p>
           </div>
         </div>
         <div class="category-card">
-          <div class="category-img">
-            <svg width="100" height="100" viewBox="0 0 100 100"><rect x="20" y="45" width="60" height="10" fill="#cbd5e1" stroke="#334155"/></svg>
-          </div>
+         <div class="category-img" style="padding: 0; overflow: hidden;">
+           <img src="img/categoria-maquinas.png" alt="Máquinas Industriais" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+         </div>
           <div class="category-info">
             <h3 class="category-title">MÁQUINAS INDUSTRIAIS</h3>
             <p class="category-text">Máquinas industriais selecionadas para oferecer precisão, durabilidade e eficiência em cada operação.</p>
           </div>
         </div>
         <div class="category-card">
-          <div class="category-img">
-            <svg width="100" height="100" viewBox="0 0 100 100"><rect x="35" y="35" width="30" height="35" fill="#ea580c"/></svg>
-          </div>
+         <div class="category-img" style="padding: 0; overflow: hidden;">
+           <img src="img/categoria-ferramentas.png" alt="Ferramentas Manuais" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+       </div>
           <div class="category-info">
             <h3 class="category-title">FERRAMENTAS MANUAIS</h3>
             <p class="category-text">Soluções para o dia a dia da indústria com resistência, ergonomia e desempenho para profissionais exigentes.</p>
@@ -1522,12 +1537,16 @@
           </a>
         </div>
         <div class="about-image-wrap">
-          <div class="about-image-box">
-            <div class="about-image-overlay">
-              <div class="overlay-title">GSI LÂMINAS</div>
-              <div class="overlay-sub">LÂMINAS E FERRAMENTAS EM RIO PRETO</div>
-            </div>
-          </div>
+          <div class="about-image-box" style="padding: 0; overflow: hidden; position: relative;">
+    
+         <!-- ADICIONE A SUA IMAGEM AQUI -->
+          <img src="img/frente-da-empresa.png" alt="GSI Lâminas - Rio Preto" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+           <div class="about-image-overlay">
+            <div class="overlay-title">GSI LÂMINAS</div>
+             <div class="overlay-sub">LÂMINAS E FERRAMENTAS EM RIO PRETO</div>
+             </div>
+           </div>
         </div>
       </div>
     </div>
